@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-logo">
+    <img src="assets/img/appicon.svg" alt="Ionic logo">
+  </div>
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Email" formControlName="email" [(ngModel)]="logindatos.username"></ion-input>
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder="Password" formControlName="password" [(ngModel)]="logindatos.password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
+    <ion-button expand="full" type="button" (click)="register()">Create account</ion-button>
+  </form>
+</ion-content>

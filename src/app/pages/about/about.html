@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-header>
+      <h2 class="ion-padding-bottom ion-padding-top ion-padding-start">Lista de Profesores</h2>
+  </ion-header>
+
+  <div class="about-info">
+  </div>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let profesor of profesores$ | async">
+        <ion-label class="ion-text-wrap">
+          <h2>Nombre: {{profesor.name}}</h2>
+          <p>Email: {{profesor.email}}</p>
+          <p>Descripcion: {{profesor.description}}</p>
+          <p>Titulo: {{profesor.title}}</p>
+          <p>Location: {{profesor.location}}</p>
+          <p>GitHub: {{profesor.github}}</p>
+          <p>Instagram: {{profesor.insta}}</p>
+          <p>Twitter: {{profesor.twitter}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>

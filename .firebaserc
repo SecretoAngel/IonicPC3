@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pc3-angelescobar": {
+      "hosting": {
+        "app": [
+          "pc3-angelescobar"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pc3-angelescobar"
+  }
+}

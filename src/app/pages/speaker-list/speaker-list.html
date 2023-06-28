@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-header>
+      <h2 class="ion-padding-bottom ion-padding-top ion-padding-start">Lista de Temas de TFG</h2>
+  </ion-header>
+
+  <div class="about-info">
+  </div>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let tema of temas$ | async">
+        <ion-label class="ion-text-wrap">
+          <h2>Titulo: {{tema.titulo}}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
